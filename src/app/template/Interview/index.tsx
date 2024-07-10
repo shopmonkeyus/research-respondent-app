@@ -45,6 +45,16 @@ export const InterviewWrapper = (props: InterviewProps) => {
       {/* Embed link if present */}
       {props.interview?.study?.meta?.embedUrls && !watchedEmbed ? (
         <div className="w-full flex flex-col justify-center items-center px-3 py-5">
+          <div className="w-full h-20 flex justify-center">
+            <Button
+              className="mt-5"
+              size="lg"
+              onClick={() => setWatchedEmbed(true)}
+            >
+              Continue
+            </Button>
+          </div>
+
           <EmbedWrapper url={props.interview?.study?.meta?.embedUrls[0]} />
 
           <div className="w-full h-20 flex justify-center">
